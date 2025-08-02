@@ -1,9 +1,9 @@
 items:
-  - text: Menu One
+  - text: Electronics & Gadgets
     url: /posts/test/
-  - text: Menu Two
+  - text: Home & Living
     url: "#"
-  - text: Menu Three
+  - text: Beauty & Personal Care
     url: "#"
-  - text: All Category
+  - text: Food & Beverages
     url: /blog
