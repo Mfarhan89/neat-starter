@@ -7,3 +7,5 @@ items:
     url: "#"
   - text: Food & Beverages
     url: /blog
+  - text: All Category
+    url: /blog
