@@ -1,4 +1,6 @@
 items:
+  - text: Home
+    url: /
   - text: Electronics & Gadgets
     url: /posts/test/
   - text: Home & Living
