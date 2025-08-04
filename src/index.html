@@ -9,44 +9,42 @@ path: home
   <!-- 🟦 Running Banner -->
   <div class="w-full overflow-hidden bg-blue-800 text-white font-semibold py-3">
     <div class="inline-block animate-marquee whitespace-nowrap">
-      🚀 Welcome to <span class="text-yellow-300 font-bold">GetCart.my</span> — Your All-in-One Online Store Solution! 🛍️
+      🚀 Welcome to <span class="text-yellow-300 font-bold">GetCart.my</span> — Your All-in-One Online Store Solution! 🛍️ Start selling smarter today!
     </div>
   </div>
 
   <!-- 🔷 Logo + Title Section -->
-  <div class="mt-10 flex flex-col items-center space-y-6">
-    <a href="/" class="hover:scale-105 transition duration-300 ease-in-out">
+  <div class="mt-10 flex flex-col items-center space-y-6 animate-fade-in-up">
+    <a href="/" class="hover:scale-110 transition-transform duration-500 ease-in-out">
       <img src="static/img/icon.png" alt="GetCart Logo" width="180" height="180" class="rounded-xl shadow-lg" />
     </a>
 
-    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900">
+    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900 animate-fade-in-up delay-100">
       Welcome to
       <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
         {{title}}
       </span>
     </h1>
 
-    <p class="text-lg text-gray-600 max-w-xl">
+    <p class="text-lg text-gray-600 max-w-xl animate-fade-in-up delay-200">
       Launch your store. Manage your inventory. Grow your business — all in one place.
     </p>
 
     <!-- 🚀 CTA Button -->
-    <a href="#start" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-xl transition duration-300 hover:scale-105">
+    <a href="#start" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-xl transition duration-300 hover:scale-105 animate-fade-in-up delay-300">
       🚀 Start with GetCart Now
     </a>
   </div>
 
- 
   <!-- 🔗 Centered Content Partial Include -->
-<div class="mt-12 w-full flex justify-center">
-  <div class="w-full max-w-4xl px-4">
-    {% include "./_includes/partials/content.html" %}
+  <div class="mt-16 w-full flex justify-center animate-fade-in-up delay-500">
+    <div class="w-full max-w-4xl px-4">
+      {% include "./_includes/partials/content.html" %}
+    </div>
   </div>
 </div>
 
-
-
-<!-- 💫 Marquee Animation -->
+<!-- 💫 Custom Animations -->
 <style>
 @keyframes marquee {
   0% { transform: translateX(100%); }
@@ -57,4 +55,23 @@ path: home
   padding-left: 100%;
   animation: marquee 20s linear infinite;
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0; /* ensures hidden until animation starts */
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
 </style>
