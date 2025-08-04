@@ -4,60 +4,53 @@ title: GetCart
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+<div class="min-h-screen flex flex-col justify-center items-center bg-white px-4 text-center">
 
-  <div class="banner-container">
-  <div class="banner-text">
-    🚀 Welcome to GetCart.my — Your All-in-One Online Store Solution! 🛒 Start Selling Now & Grow Your Business Today!
+  <!-- 🟦 Running Banner -->
+  <div class="w-full overflow-hidden bg-blue-800 text-white font-semibold py-3">
+    <div class="inline-block animate-marquee whitespace-nowrap">
+      🚀 Welcome to <span class="text-yellow-300 font-bold">GetCart.my</span> — Your All-in-One Online Store Solution! 🛍️ Start selling smarter today!
+    </div>
+  </div>
+
+  <!-- 🔷 Logo + Title Section -->
+  <div class="mt-10 flex flex-col items-center space-y-6">
+    <a href="/" class="hover:scale-105 transition duration-300 ease-in-out">
+      <img src="static/img/icon.png" alt="GetCart Logo" width="180" height="180" class="rounded-xl shadow-lg" />
+    </a>
+
+    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900">
+      Welcome to
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+        {{title}}
+      </span>
+    </h1>
+
+    <p class="text-lg text-gray-600 max-w-xl">
+      Launch your store. Manage your inventory. Grow your business — all in one place.
+    </p>
+
+    <!-- 🚀 CTA Button -->
+    <a href="#start" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-xl transition duration-300 hover:scale-105">
+      🚀 Start with GetCart Now
+    </a>
+  </div>
+
+  <!-- 🔗 Content Partial Include -->
+  <div class="mt-12 w-full">
+    {% include "./_includes/partials/content.html" %}
   </div>
 </div>
 
+<!-- 💫 Marquee Animation -->
 <style>
-.banner-container {
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #1e40af; /* Tailwind Blue-800 */
-  color: #fff;
-  padding: 10px 0;
-  font-weight: bold;
-  font-size: 1.2rem;
-  position: relative;
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
-
-.banner-text {
+.animate-marquee {
   display: inline-block;
   padding-left: 100%;
-  animation: scroll-left 20s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  animation: marquee 20s linear infinite;
 }
 </style>
-
-  <div class="flex items-center">
-        <P><a href="/" class="text-indigo-500 font-bold text-lg">
-                <img src="static/img/icon.png" alt="Description of image" width="300" height="200">
-</a></div></P>
-  <h1>
-   
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-     
-  </h1>
-  
-            
-  <p>
-    Browse your favourite now.
-    <code class="bg-gray-100 text-blue-800 p-1">Let's GetCart Now!</code>
-  </p>
-
-  {% include "./_includes/partials/content.html" %}
-</div>
