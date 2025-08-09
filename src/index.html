@@ -4,7 +4,7 @@ title: GetCart
 path: home
 ---
 
-<div class="min-h-screen flex flex-col justify-center items-center bg-white px-4 text-center">
+<div class="min-h-screen flex flex-col justify-center items-center bg-white px-4 sm:px-6 lg:px-8 text-center">
 
   <!-- 🟦 Running Banner -->
   <div class="w-full overflow-hidden bg-blue-800 text-white font-semibold py-3">
@@ -16,29 +16,29 @@ path: home
   <!-- 🔷 Logo + Title Section -->
   <div class="mt-10 flex flex-col items-center space-y-6 animate-fade-in-up">
     <a href="/" class="hover:scale-110 transition-transform duration-500 ease-in-out">
-      <img src="static/img/icon.png" alt="GetCart Logo" width="180" height="180" class="rounded-xl shadow-lg" />
+      <img src="static/img/icon.png" alt="GetCart Logo" class="w-32 sm:w-40 md:w-48 lg:w-56 rounded-xl shadow-lg" />
     </a>
 
-    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900 animate-fade-in-up delay-100">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 animate-fade-in-up delay-100">
       Welcome to
       <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
         {{title}}
       </span>
     </h1>
 
-    <p class="text-lg text-gray-600 max-w-xl animate-fade-in-up delay-200">
+    <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl animate-fade-in-up delay-200 px-4">
       Launch your store. Manage your inventory. Grow your business — all in one place.
     </p>
 
     <!-- 🚀 CTA Button -->
-    <a href="#start" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-xl transition duration-300 hover:scale-105 animate-fade-in-up delay-300">
+    <a href="#start" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-xl transition duration-300 hover:scale-105 animate-fade-in-up delay-300">
       🚀 Start with GetCart Now
     </a>
   </div>
 
   <!-- 🔗 Centered Content Partial Include -->
-  <div class="mt-16 w-full flex justify-center animate-fade-in-up delay-500">
-    <div class="w-full max-w-4xl px-4">
+  <div class="mt-12 sm:mt-16 w-full flex justify-center animate-fade-in-up delay-500">
+    <div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
       {% include "./_includes/partials/content.html" %}
     </div>
   </div>
@@ -68,7 +68,7 @@ path: home
 }
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0; /* ensures hidden until animation starts */
+  opacity: 0;
 }
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
